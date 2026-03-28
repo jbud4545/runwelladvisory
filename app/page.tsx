@@ -29,6 +29,7 @@ import {
 } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { SplineScene } from "@/components/ui/spline-scene"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -553,7 +554,7 @@ export default function HomePage() {
       {/* Founder Section */}
       <section id="about" className="py-24 lg:py-32 noise-overlay">
         <div className="container relative z-10 mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -572,7 +573,7 @@ export default function HomePage() {
                   {"That means your first conversation isn't about what tech stack to use. It's about what's slowing your business down, what's costing you time, and where the biggest leverage is. Then we go build it."}
                 </p>
               </div>
-              
+
               <div className="pt-4">
                 <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
                   <Link href="https://calendly.com/jdhogerty/meeting-with-jimmy">
@@ -582,7 +583,19 @@ export default function HomePage() {
                 </Button>
               </div>
             </motion.div>
-            
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="relative h-[500px] hidden lg:block"
+            >
+              <SplineScene
+                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                className="w-full h-full"
+              />
+            </motion.div>
           </div>
         </div>
       </section>

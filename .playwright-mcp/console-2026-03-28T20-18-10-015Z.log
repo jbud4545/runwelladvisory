@@ -1,0 +1,2 @@
+[    4053ms] [WARNING] updating from  114 to  122 @ webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/@splinetool+runtime@1.12.72/node_modules/@splinetool/runtime/build/runtime.js:3155
+[   60385ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed:  @ webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@14.2.25_@babel+core@7.29.0_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/use-websocket.js:41
