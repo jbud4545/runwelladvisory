@@ -18,8 +18,6 @@ import {
   Users,
   Zap,
   Mail,
-  Linkedin,
-  Twitter,
   ChevronRight,
   Link2,
   Sparkles,
@@ -80,52 +78,66 @@ export default function HomePage() {
         <div className="absolute inset-0 grid-pattern opacity-40" />
         
         <div className="container relative z-10 mx-auto px-6 lg:px-8 py-24 lg:py-32">
-          <motion.div 
-            className="max-w-4xl"
-            initial="initial"
-            animate="animate"
-            variants={staggerContainer}
-          >
-            <motion.h1 
-              className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-foreground leading-[1.1] text-balance"
-              variants={fadeInUp}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="initial"
+              animate="animate"
+              variants={staggerContainer}
             >
-              The systems that got you here{" "}
-              <span className="text-primary">{"won't get you there."}</span>
-            </motion.h1>
-            
-            <motion.p 
-              className="mt-8 text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed"
-              variants={fadeInUp}
-            >
-              {"We help growing businesses replace manual workflows with AI systems that scale — without hiring an engineering team."}
-            </motion.p>
-            
-            <motion.div 
-              className="mt-10 flex flex-col sm:flex-row gap-4"
-              variants={fadeInUp}
-            >
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8">
-                <Link href="https://calendly.com/jdhogerty/meeting-with-jimmy">
-                  Book a Free Strategy Call
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="ghost" size="lg" className="text-muted-foreground hover:text-foreground text-base">
-                <Link href="#work">
-                  See Our Work
-                  <ArrowDown className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <motion.h1
+                className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-foreground leading-[1.1] text-balance"
+                variants={fadeInUp}
+              >
+                Your team does the work.
+                <br />
+                <span className="text-primary">We build the systems that multiply it.</span>
+              </motion.h1>
+
+              <motion.p
+                className="mt-8 text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed"
+                variants={fadeInUp}
+              >
+                {"We help growing businesses replace manual workflows with AI systems that scale — without hiring an engineering team."}
+              </motion.p>
+
+              <motion.div
+                className="mt-10 flex flex-col sm:flex-row gap-4"
+                variants={fadeInUp}
+              >
+                <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8">
+                  <Link href="https://calendly.com/jdhogerty/meeting-with-jimmy">
+                    Book a Free Strategy Call
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild variant="ghost" size="lg" className="text-muted-foreground hover:text-foreground text-base">
+                  <Link href="#work">
+                    See Our Work
+                    <ArrowDown className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </motion.div>
+
+              <motion.p
+                className="mt-12 text-sm text-muted-foreground border-l-2 border-primary/50 pl-4"
+                variants={fadeInUp}
+              >
+                {"Less busywork. Fewer tools. AI systems that actually work."}
+              </motion.p>
             </motion.div>
-            
-            <motion.p 
-              className="mt-12 text-sm text-muted-foreground border-l-2 border-primary/50 pl-4"
-              variants={fadeInUp}
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="relative h-[500px] hidden lg:block"
             >
-              {"We've saved clients 100+ hours/month and replaced 5+ tools with unified systems."}
-            </motion.p>
-          </motion.div>
+              <SplineScene
+                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                className="w-full h-full"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -760,8 +772,8 @@ export default function HomePage() {
             
             <p className="mt-8 text-sm text-muted-foreground">
               Or email us at{" "}
-              <a href="mailto:hello@studio.com" className="text-primary hover:underline">
-                hello@studio.com
+              <a href="mailto:hello@runwelladvisory.com" className="text-primary hover:underline">
+                hello@runwelladvisory.com
               </a>
             </p>
           </motion.div>
@@ -774,7 +786,7 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row justify-between items-start gap-12">
             <div className="space-y-4">
               <Link href="/" className="font-heading text-xl font-semibold tracking-tight text-foreground">
-                Runwell
+                Runwell Advisory, LLC
               </Link>
               <p className="text-sm text-muted-foreground">
                 San Francisco, CA
@@ -799,22 +811,6 @@ export default function HomePage() {
                 </nav>
               </div>
               
-              <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="p-2 text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
-                <a
-                  href="#"
-                  className="p-2 text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="h-5 w-5" />
-                </a>
-              </div>
             </div>
           </div>
           
@@ -822,14 +818,6 @@ export default function HomePage() {
             <p className="text-sm text-muted-foreground">
               {`© ${new Date().getFullYear()} Runwell. All rights reserved.`}
             </p>
-            <div className="flex gap-6">
-              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Terms of Service
-              </Link>
-            </div>
           </div>
         </div>
       </footer>

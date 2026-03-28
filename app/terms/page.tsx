@@ -67,8 +67,8 @@ export default function TermsOfService() {
                 <h2 className="text-2xl font-bold text-white mb-4">Contact Information</h2>
                 <p>
                   For questions about these Terms of Service, contact us at{" "}
-                  <a href="mailto:legal@aiagency.com" className="text-blue-400 hover:text-blue-300">
-                    legal@aiagency.com
+                  <a href="mailto:hello@runwelladvisory.com" className="text-blue-400 hover:text-blue-300">
+                    hello@runwelladvisory.com
                   </a>
                 </p>
               </section>
