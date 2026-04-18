@@ -20,14 +20,12 @@ export const metadata: Metadata = {
   description: 'We help $1M-$10M businesses replace manual workflows and duct-taped tool stacks with custom AI-powered systems. Book a free strategy call.',
   generator: 'v0.app',
   icons: {
+    shortcut: '/favicon.ico',
     icon: [
       {
         url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
+        sizes: '32x32',
+        type: 'image/png',
       },
       {
         url: '/icon.svg',
